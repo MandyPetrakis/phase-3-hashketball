@@ -126,4 +126,7 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored player
+  player_info = game_hash.each{|team| team[:players][:player_name] == player}
+  player_info[:points]
+end
